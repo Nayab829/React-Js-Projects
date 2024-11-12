@@ -1,0 +1,40 @@
+
+.cards-container{
+    margin-top: 50px;
+    justify-content: center;
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+}
+
+.next-prew{
+    gap: 20px;
+}
+.arrow-icon{
+    background-color: #EB423F;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    font-size: 40px;
+    cursor: pointer;
+}
+.left{
+color: #EB423F;
+background-color: #fd511d3c;
+}
+@media (max-width:560px){
+    .trending-products .section-heading{
+        font-size: 30px;
+    }
+    .card{
+        flex-basis: 100%;
+    }
+    .next-prew{
+        gap: 10px;
+    }
+}

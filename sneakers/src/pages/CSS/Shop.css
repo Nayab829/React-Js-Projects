@@ -1,0 +1,15 @@
+.shop .flex:nth-child(2){
+    justify-content: center;
+    align-items: unset;
+    /* flex-wrap: wrap; */
+    gap: 20px;
+    & .card .flex{
+        justify-content: unset;
+    }
+
+}
+.shop-cards{
+    flex-basis: 80%;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
