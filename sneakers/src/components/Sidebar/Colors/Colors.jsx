@@ -6,20 +6,20 @@ const Colors = () => {
        <h3 className='title'>Colors</h3>
        <div className="label-container">
        <label >
-        <input type="radio" name="" id="" />
+        <input type="radio" name="test1" id="" />
         <span className="checkmark"></span>All
        </label>
        <label >
+        <input type="radio" name="test1" id="" />Blue
         <span className="checkmark"></span>
-        <input type="radio" name="" id="" />Blue
        </label>
        <label >
+        <input type="radio" name="test1" id="" />Red
         <span className="checkmark"></span>
-        <input type="radio" name="" id="" />Red
        </label>
        <label >
+        <input type="radio" name="test1" id="" />Green
         <span className="checkmark"></span>
-        <input type="radio" name="" id="" />Green
        </label>
        </div>
     </div>

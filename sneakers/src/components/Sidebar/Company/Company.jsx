@@ -5,20 +5,20 @@ const Company = () => {
     <div>
        <h3 className='title'>Company</h3>
        <label >
+        <input type="radio" name="test" checked id="" />All
         <span className="checkmark"></span>
-        <input type="radio" name="" id="" />All
        </label>
        <label >
+        <input type="radio" name="test" checked id="" />Blue
         <span className="checkmark"></span>
-        <input type="radio" name="" id="" />Blue
        </label>
        <label >
+        <input type="radio" name="test" checked id="" />Red
         <span className="checkmark"></span>
-        <input type="radio" name="" id="" />Red
        </label>
        <label >
+        <input type="radio" name="test" id="" />Green
         <span className="checkmark"></span>
-        <input type="radio" name="" id="" />Green
        </label>
     </div>
   )

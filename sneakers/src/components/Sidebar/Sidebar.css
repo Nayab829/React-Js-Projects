@@ -58,4 +58,12 @@
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+    display: none;
+}
+.sidebar label input:checked~.checkmark::after{
+
+display: block;
+}
+.sidebar label:hover .checkmark{
+    
 }
