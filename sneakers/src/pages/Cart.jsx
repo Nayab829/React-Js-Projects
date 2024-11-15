@@ -24,7 +24,7 @@ const Cart = () => {
               <div>
                 {cart.products.map((product) => {
                   return <div key={product.id}
-                    className='flex items-center justify-between p-3 border-b'>
+                    className='flex items-center p-4 border-b space-x-8'>
                     <div className='md:flex items-center '>
                       <img src={product.image} alt={product.name} className='h-16 w-16 object-contain rounded' />
                       <div className='flex-1 ml-4'>
@@ -58,7 +58,7 @@ const Cart = () => {
 
 
             </div>
-            <div className=' shadow-md p-5 rounded'>
+            <div className=' shadow-md p-5 rounded w-2/6'>
               <h3 className='text-lg font-bold mb-6'>Cart Total</h3>
               <div className='flex justify-between items-center'>
                 <span className='text-lg font-bold'>Total Items</span>
@@ -72,7 +72,7 @@ const Cart = () => {
               </div>
               <div className='flex justify-between items-center'>
                 <span>Total Price </span>
-                <span>{cart.totalPrice}</span>
+                <span>${cart.totalPrice}</span>
 
               </div>
               <button className='w-full bg-red-500 text-white py-3 mt-5'>Proceed to checkout</button>
