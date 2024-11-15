@@ -14,7 +14,7 @@ const Navbar = () => {
   const products = useSelector(state => state.cart.products)
   return (
     <header className='shadow-md sticky top-0 left-0 bg-white z-10  px-3 '>
-      <div className="max-w-7xl mx-auto flex gap-12 py-6 justify-between">
+      <div className="w-full lg:max-w-7xl  mx-auto flex gap-12 py-6 justify-between">
         <div className=" flex items-center basis-3/12">
           <img src={logo} className='w-10' alt="logo" />
           <p className='text-2xl font-bold'>SNEAKERS</p>
@@ -26,7 +26,7 @@ const Navbar = () => {
           <NavLink to="/about" className='mx-3'><li className='text-lg'>About</li></NavLink>
           <NavLink to="/contact" className='mx-3'><li className='text-lg'>Contact</li></NavLink>
         </ul>
-        <ul className={`flex md:flex-row basis-1/2 gap-10 flex-col bg-white absolute top-24 -right-56 w-64 p-5 rounded shadow-md  ${showMenu ? "right-0" : "-right-full"}`}>
+        <ul className={`flex  basis-1/2 gap-10 flex-col bg-white absolute top-24 -right-56 w-64 p-5 rounded shadow-md  ${showMenu ? "right-0" : "-right-full"}`}>
           <FaTimes className='absolute top-4 right-4 cursor-pointer md:hidden ' onClick={() => setShowMenu(!showMenu)} />
           <NavLink to="/" className='mx-3' onClick={() => setShowMenu(!showMenu)}> <li className='text-lg'>Home</li></NavLink>
           <NavLink to="/shop" className='mx-3' onClick={() => setShowMenu(!showMenu)}><li className='text-lg'>Shop</li></NavLink>
