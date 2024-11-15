@@ -4,32 +4,18 @@ import logo from '../../assets/logo.png'
 import { FaArrowRightLong } from 'react-icons/fa6'
 const Footer = () => {
   return (
-    <div className='footer'>
-      <div className="container">
-      <div className="footer-box flex">
-      <div className="footer-left">
-       <h1 className="footer-heading">Are You Interested?</h1>
-        <a>Shoping Now   <FaArrowRightLong className='footer-icon'/>
-        </a>
-       </div>
-       <div className="footer-right">
-       <div className="nav-logo flex">
-          <img src={logo} alt="logo" />
-          <p>Sneakers</p>
+    <footer className='bg-gray-800'>
+      <div className=" max-w-7xl  mx-auto text-white grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className='flex flex-col gap-5'>
+        <div className="flex">
+          <img src={logo} alt="logo" className='w-8' />
+          <p className='font-semibold text-xl'>SNEAKER</p>
         </div>
-        <ul>
-            <li>Shop</li>
-            <li>About</li>
-            <li>Blog</li>
-            <li>Contact</li>
-        </ul>
-       </div>
+        <p>Lorem ipsum dolor sit amet Maiores at reprehenderit praesentium esse voluptatibus repellendus.</p>
+        </div>
+
       </div>
-      <div className="copyright">
-        Copyright Sneaker Shoes sales 2024-All rights reserverd.
-      </div>
-      </div>
-    </div>
+    </footer>
   )
 }
 

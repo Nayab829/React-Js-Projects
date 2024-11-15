@@ -4,8 +4,8 @@ import hero_bg from '../../assets/hero_bg.png'
 import './Hero.css'
 const Hero = () => {
     return (
-        <div className='hero'>
-            <div className="container flex">
+        <main className='hero '>
+            <div className="max-w-screen-xl mx-auto flex items-center w-full ">
                 <div className="content">
                     <h1 className='hero-heading'>Sh <span className="stretch">o</span> es <br />Collect!</h1>
                     <p className="hero-para">
@@ -17,7 +17,7 @@ const Hero = () => {
                     <img src={hero_bg} alt="hero-img" />
                 </div>
             </div>
-        </div>
+        </main>
     )
 }
 

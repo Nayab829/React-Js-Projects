@@ -3,23 +3,23 @@ import '../Sidebar.css'
 const Company = () => {
   return (
     <div>
-       <h3 className='title'>Company</h3>
-       <label >
-        <input type="radio" name="test" checked id="" />All
+      <h3 className='title'>Company</h3>
+      <label >
+        <input type="radio" name="test" id="" />All
         <span className="checkmark"></span>
-       </label>
-       <label >
-        <input type="radio" name="test" checked id="" />Blue
+      </label>
+      <label >
+        <input type="radio" name="test" id="" />Blue
         <span className="checkmark"></span>
-       </label>
-       <label >
-        <input type="radio" name="test" checked id="" />Red
+      </label>
+      <label >
+        <input type="radio" name="test" id="" />Red
         <span className="checkmark"></span>
-       </label>
-       <label >
+      </label>
+      <label >
         <input type="radio" name="test" id="" />Green
         <span className="checkmark"></span>
-       </label>
+      </label>
     </div>
   )
 }

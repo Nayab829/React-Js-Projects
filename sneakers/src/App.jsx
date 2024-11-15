@@ -7,10 +7,9 @@ import Home from './pages/Home'
 import Shop from './pages/Shop'
 import About from './pages/About'
 import Layout from './Layout/Layout'
-import Hero from './components/Hero/Hero'
-import Blog from './pages/Blog'
 import Contact from './pages/Contact'
 import ErrorPage from './components/ErrorPage'
+import Cart from './pages/Cart'
 
 
 function App() {
@@ -33,8 +32,8 @@ function App() {
           element: <About />
         },
         {
-          path: "/blog",
-          element: <Blog />
+          path: "/cart",
+          element: <Cart />
         },
         {
           path: "/contact",

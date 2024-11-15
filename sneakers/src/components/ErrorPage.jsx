@@ -8,7 +8,8 @@ const ErrorPage = () => {
     }
   return (
     <div className='error'>
-      <h1>ERROR 404</h1>
+      
+      <img src="./error.png" alt="" className='max-w-72'/>
     <div className="btns">
     <Link to="/"><button className='btn'>Back To Home</button></Link>
     <Link onClick={handleBack}><button  className='btn'>Go Back</button></Link>
