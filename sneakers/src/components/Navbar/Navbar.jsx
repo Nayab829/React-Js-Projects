@@ -19,7 +19,14 @@ const Navbar = () => {
           <img src={logo} className='w-10' alt="logo" />
           <p className='text-2xl font-bold'>SNEAKERS</p>
         </div>
-        <ul className={`md:flex basis-1/2 gap-10 block bg-white absolute top-24 -right-56 w-64 p-5 rounded shadow-md  ${showMenu ? "right-0" : "-right-full"}`}>
+        {/* //lg */}
+        <ul className={`md:flex gap-10 hidden md:flex-row`}>
+          <NavLink to="/" className='mx-3'><li className='text-lg'>Home</li></NavLink>
+          <NavLink to="/shop" className='mx-3'><li className='text-lg'>Shop</li></NavLink>
+          <NavLink to="/about" className='mx-3'><li className='text-lg'>About</li></NavLink>
+          <NavLink to="/contact" className='mx-3'><li className='text-lg'>Contact</li></NavLink>
+        </ul>
+        <ul className={`flex md:flex-row basis-1/2 gap-10 flex-col bg-white absolute top-24 -right-56 w-64 p-5 rounded shadow-md  ${showMenu ? "right-0" : "-right-full"}`}>
           <FaTimes className='absolute top-4 right-4 cursor-pointer md:hidden ' onClick={() => setShowMenu(!showMenu)} />
           <NavLink to="/" className='mx-3' onClick={() => setShowMenu(!showMenu)}> <li className='text-lg'>Home</li></NavLink>
           <NavLink to="/shop" className='mx-3' onClick={() => setShowMenu(!showMenu)}><li className='text-lg'>Shop</li></NavLink>

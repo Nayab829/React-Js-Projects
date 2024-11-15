@@ -1,12 +1,11 @@
 import React from 'react'
-import './Footer.css'
 import logo from '../../assets/logo.png'
 import { FaArrowRightLong, FaFacebook, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <footer className='bg-gray-800 px-5'>
-      <div className=" max-w-7xl  mx-auto text-white grid grid-cols-1 md:grid-cols-3 gap-5 py-10">
+      <div className=" max-w-7xl  mx-auto text-white grid grid-cols-1 lg:grid-cols-3 gap-5 py-10">
         <div className='flex flex-col gap-5'>
         <div className="flex items-center">
           <img src={logo} alt="logo" className='w-8' />
@@ -16,7 +15,7 @@ const Footer = () => {
         </div>
         <div>
           <h3 className='font-semibold text-lg mb-5'>Quick Links</h3>
-          <ul className='text-gray-200 flex flex-col gap-3 items-center lg:items-start'>
+          <ul className='text-gray-200 flex flex-col gap-3 items-center md:items-start'>
             <li>
               <Link to='/' className='hover:text-red-500'>Home</Link>
             </li>
@@ -42,7 +41,7 @@ const Footer = () => {
           <form >
             <input type="text" placeholder='Your email' className='p-2 bg-gray-700 outline-none 
             '  />
-            <button className='bg-red-500 text-white p-2'>Subscribe</button>
+            <button className='bg-red-500 text-white p-2 -mr-8'>Subscribe</button>
           </form>
         </div>
 
