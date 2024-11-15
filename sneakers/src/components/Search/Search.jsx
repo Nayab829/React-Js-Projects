@@ -8,13 +8,12 @@ const Search = () => {
 
   return (
     <section className='max-w-7xl mx-auto mt-6'>
-      <div className=" flex items-center  ">
-        <button className='flex items-center bg-red-500 text-white px-5 py-3 rounded'>Filters<FaFilter /></button>
-
-        <div className="basis-10/12 flex items-center">
+      <div className=" flex items-center  justify-center">
+       
           <input type="text " placeholder='Search products here...'  className='bg-gray-100 p-3 outline-none w-2/4'/>
           <button className='bg-red-500 text-white px-3 py-3 text-2xl -ml-4 rounded'><CiSearch /></button>
-        </div>
+
+       
       </div>
     </section>
   )

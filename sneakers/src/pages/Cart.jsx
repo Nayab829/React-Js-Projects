@@ -47,7 +47,7 @@ const Cart = () => {
 
 
                     <div>
-                      ${(product.quantity * product.price).toFixed(2)}
+                      ${product.quantity * product.price.toFixed(2)}
                     </div>
                     <div className='text-red-500 hover:text-red-800'>
                       <FaTrashAlt />

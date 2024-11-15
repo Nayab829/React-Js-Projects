@@ -26,7 +26,7 @@ const Navbar = () => {
           <NavLink to="/about" className='mx-3'><li className='text-lg'>About</li></NavLink>
           <NavLink to="/contact" className='mx-3'><li className='text-lg'>Contact</li></NavLink>
         </ul>
-        <ul className={`flex  basis-1/2 gap-10 flex-col bg-white absolute top-24 -right-56 w-64 p-5 rounded shadow-md  ${showMenu ? "right-0" : "-right-full"}`}>
+        <ul className={`flex  basis-1/2 gap-10 flex-col bg-white absolute top-24 -right-full w-64 p-5 rounded shadow-md  ${showMenu ? "right-0" : "-right-full"}`}>
           <FaTimes className='absolute top-4 right-4 cursor-pointer md:hidden ' onClick={() => setShowMenu(!showMenu)} />
           <NavLink to="/" className='mx-3' onClick={() => setShowMenu(!showMenu)}> <li className='text-lg'>Home</li></NavLink>
           <NavLink to="/shop" className='mx-3' onClick={() => setShowMenu(!showMenu)}><li className='text-lg'>Shop</li></NavLink>
