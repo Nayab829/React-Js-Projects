@@ -16,8 +16,8 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false)
   const products = useSelector(state => state.cart.products)
   return (
-    <header className='w-full  shadow-md sticky top-0 left-0 right-0 bg-white z-10  px-3 '>
-      <div className="w-full lg:max-w-7xl  mx-auto flex gap-12 py-6 justify-between">
+    <header className='w-full overflow-x-hidden  shadow-md sticky top-0 left-0 right-0 bg-white z-10  px-3 '>
+      <div className="w-full lg:max-w-7xl  md:mx-auto flex gap-12 py-6 justify-between">
         <div className=" flex items-center basis-3/12">
           <img src={logo} className='w-10' alt="logo" />
           <p className='text-2xl font-bold'>SNEAKERS</p>
