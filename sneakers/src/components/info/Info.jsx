@@ -34,7 +34,7 @@ const Info = () => {
     ]
     return (
         <section>
-            <div className="max-w-7xl flex gap-6 mx-auto flex-wrap justify-center h-2/4 mt-24">
+            <div className=" md:w-full px-2 lg:max-w-7xl flex gap-6 mx-auto flex-wrap justify-center h-2/4 mt-24">
                 {infoItems.map((item, index) => {
                    return  <div className="info-card flex items-center" key={index}>
                         <span >{item.icon}</span>

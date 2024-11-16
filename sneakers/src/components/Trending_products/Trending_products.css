@@ -31,8 +31,11 @@ background-color: #fd511d3c;
     .trending-products .section-heading{
         font-size: 30px;
     }
+    .trending-products{
+        padding-inline: 10px;
+    }
     .card{
-        flex-basis: 100%;
+        flex-basis: 90%;
     }
     .next-prew{
         gap: 10px;
