@@ -109,3 +109,9 @@ padding: 20px;
         flex-basis: 90%;
     }
 }
+@media (max-width:460px){
+  
+    .card{
+        flex-basis: 100%;
+    }
+}

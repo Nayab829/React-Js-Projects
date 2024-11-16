@@ -1,17 +1,21 @@
 import React, { useState } from 'react'
 import { FaTrashAlt } from 'react-icons/fa'
 import { useSelector } from 'react-redux'
+import AddressModal from '../components/AddressModal'
+import Modal from '../components/Modal'
 
 const Cart = () => {
   const cart = useSelector(state => state.cart)
   const [address, setAddress] = useState("main street, 023")
+  const [isModalOpen,setIsModalOpen] = useState(false)
+  
   return (
     <div className='max-w-screen-xl mx-auto p-8 md:px-16 lg:px-24'>
       {cart.products.length > 0 ?
         <div className=''>
           <h3 className='text-2xl font-semibold mb-4'>SHOPPING CART</h3>
-          <div className='flex flex-col md:flex-row justify-between space-x-10 mt-8' >
-            <div className='md:w-2/3'>
+          <div className='flex flex-col md:flex-row  justify-between gap-7 mt-8 ' >
+            <div className='md:w-2/3 overflow-x-auto'>
               <div className='flex items-center justify-between mb-4 font-bold text-lg border-b'>
                 <p>Products</p>
                 <div className='flex space-x-8 '>
@@ -47,7 +51,7 @@ const Cart = () => {
 
 
                     <div>
-                      ${product.quantity * product.price.toFixed(2)}
+                      ${product.total}
                     </div>
                     <div className='text-red-500 hover:text-red-800'>
                       <FaTrashAlt />
@@ -58,26 +62,34 @@ const Cart = () => {
 
 
             </div>
-            <div className=' shadow-md p-5 rounded w-2/6'>
-              <h3 className='text-lg font-bold mb-6'>Cart Total</h3>
+            <div className='w-full sm:w-4/5 border shadow-lg p-5 rounded md:w-2/6 '>
+              <h3 className='  mb-6'>Cart Total</h3>
               <div className='flex justify-between items-center'>
-                <span className='text-lg font-bold'>Total Items</span>
+                <span className=' '>Total Items</span>
                 <span>{cart.totalQuantity}</span>
               </div>
               <div>
-                <p className='text-lg font-bold'>Shipping</p>
-                <p className='inline mr-2'>Shipping To:</p>
-                <span className='text-sm font-bold'>{address}</span>
+                <p className=''>Shipping:</p>
+                <p className='inline mr-2'>Shipping To:
+                <span className='text-sm font-bold ml-2'>{address}</span>
+                <button className='text-blue-500 text-sm hover:underline' onClick={()=> setIsModalOpen(true)}>Change Address</button>
+                </p>
+                
 
               </div>
               <div className='flex justify-between items-center'>
-                <span>Total Price </span>
+                <span className='text-'>Total Price </span>
                 <span>${cart.totalPrice}</span>
 
               </div>
-              <button className='w-full bg-red-500 text-white py-3 mt-5'>Proceed to checkout</button>
+              <button className='w-full py-2 bg-red-500 text-white md:py-3 mt-5 hover:bg-red-600'>Proceed to checkout</button>
             </div>
           </div>
+         {isModalOpen ? <div>
+          <Modal setIsModalOpen={setIsModalOpen} >
+            <AddressModal setAddress={setAddress} setIsModalOpen={setIsModalOpen} />
+          </Modal>
+         </div> :<></>}
         </div> :
         <div className='flex justify-center'>
           <img src="./emptyCart.jpg" alt="empty cart" className='h-96 w-auto' />

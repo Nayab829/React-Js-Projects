@@ -24,7 +24,7 @@ import p_23 from './shop-img/p-34.jpeg';
 import p_24 from './shop-img/p-36.jpeg';
 
 
-export const products = [
+export const data = [
     {
         id: 1,
         name: "Nike Running Shoe",

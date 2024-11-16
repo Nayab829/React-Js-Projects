@@ -12,23 +12,25 @@ const cartSlice = createSlice({
         addToCart: (state, action) => {
 
             const newItem = action.payload;
-            const itemIndex = state.products.find((item) => item.id === newItem.id);
-            if (itemIndex) {
-                newItem.quantity++;
-                itemIndex.totalPrice += newItem.price;
+            const itemIndex = state.products.findIndex((item) => item.id === newItem.id);
+            if (itemIndex >=0) {
+                state.products[itemIndex].quantity++;
+                state.products[itemIndex].total+=newItem.price;
+                
             } else {
                 state.products.push({
                     id: newItem.id,
                     name: newItem.name,
                     image: newItem.image,
                     quantity: 1,
-                    totalPrice: newItem.price,
+                    total: newItem.price,
                     price: newItem.price
                 })
             }
-            state.totalPrice += newItem.totalPrice;
+            state.totalPrice += newItem.price;
             state.totalQuantity++;
-
+            console.log(state.totalPrice,state.products);
+            
 
         }
     }
