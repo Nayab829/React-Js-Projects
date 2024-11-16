@@ -10,6 +10,9 @@ import { FaTimes } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
 
 const Navbar = () => {
+  const activeClass = ({isActive})=>{
+    return isActive ? "text-red-500" :"text-gray-700"
+  }
   const [showMenu, setShowMenu] = useState(false)
   const products = useSelector(state => state.cart.products)
   return (
@@ -21,27 +24,27 @@ const Navbar = () => {
         </div>
         {/* //lg */}
         <ul className={`md:flex gap-10 hidden md:flex-row`}>
-          <NavLink to="/" className='mx-3'><li className='text-lg'>Home</li></NavLink>
-          <NavLink to="/shop" className='mx-3'><li className='text-lg'>Shop</li></NavLink>
-          <NavLink to="/about" className='mx-3'><li className='text-lg'>About</li></NavLink>
-          <NavLink to="/contact" className='mx-3'><li className='text-lg'>Contact</li></NavLink>
+          <NavLink to="/" className={activeClass}><li className={` mx-3`}>Home</li></NavLink>
+          <NavLink to="/shop" className={activeClass}><li className='text-lg'>Shop</li></NavLink>
+          <NavLink to="/about" className={activeClass}><li className='text-lg'>About</li></NavLink>
+          <NavLink to="/contact" className={activeClass}><li className='text-lg'>Contact</li></NavLink>
         </ul>
-        <ul className={`flex  basis-1/2 gap-10 flex-col bg-white absolute top-24 -right-full w-64 p-5 rounded shadow-md  ${showMenu ? "right-0" : "-right-full"}`}>
-          <FaTimes className='absolute top-4 right-4 cursor-pointer md:hidden ' onClick={() => setShowMenu(!showMenu)} />
-          <NavLink to="/" className='mx-3' onClick={() => setShowMenu(!showMenu)}> <li className='text-lg'>Home</li></NavLink>
-          <NavLink to="/shop" className='mx-3' onClick={() => setShowMenu(!showMenu)}><li className='text-lg'>Shop</li></NavLink>
-          <NavLink to="/about" className='mx-3' onClick={() => setShowMenu(!showMenu)}><li className='text-lg'>About</li></NavLink>
-          <NavLink to="/contact" className='mx-3' onClick={() => setShowMenu(!showMenu)}><li className='text-lg'>Contact</li></NavLink>
+        <ul className={`flex flex-col gap-5 duration-500 transition-all w-2/6 h-72  -z-10 md:hidden absolute  right-2 bg-white   pt-4 shadow-md rounded p-5 ${showMenu ? "top-24 opacity-100 ":"-top-96 opacity-0 w-0 h-0"}`}>
+          <FaTimes className='absolute top-2 right-2 cursor-pointer md:hidden ' onClick={() => setShowMenu(false)} />
+          <NavLink to="/" className='mx-3' onClick={() => setShowMenu(!showMenu)}> <li className='text-lg hover:text-red-500'>Home</li></NavLink>
+          <NavLink to="/shop" className='mx-3' onClick={() => setShowMenu(!showMenu)}><li className='text-lg hover:text-red-500'>Shop</li></NavLink>
+          <NavLink to="/about" className='mx-3' onClick={() => setShowMenu(!showMenu)}><li className='text-lg hover:text-red-500'>About</li></NavLink>
+          <NavLink to="/contact" className='mx-3' onClick={() => setShowMenu(!showMenu)}><li className='text-lg hover:text-red-500'>Contact</li></NavLink>
         </ul>
 
         <div className="flex  items-center justify-center gap-6 basis-1/4">
           <PiUserLight className='text-3xl font-semibold' />
-          <NavLink to="/cart" > <span className="relative "><PiShoppingCartLight className='text-3xl font-semibold' />
+          <NavLink to="/cart" > <span className="relative "><PiShoppingCartLight onClick={()=> setShowMenu(false)} className='text-3xl font-semibold' />
             <span className=" flex items-center justify-center absolute  cursor-pointer -top-1 -right-1 bg-red-500 text-white w-4 h-4 rounded-2xl">
               {products.length > 0 ? products.length : 0}
             </span>
           </span></NavLink>
-          <FaBars className='md:hidden' onClick={() => setShowMenu(!showMenu)} />
+          <FaBars className='md:hidden hover:text-red-500 cursor-pointer' onClick={() => setShowMenu(!showMenu)} />
         </div>
       </div>
     </header>
