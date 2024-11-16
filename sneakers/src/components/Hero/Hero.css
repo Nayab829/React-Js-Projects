@@ -93,10 +93,7 @@
         height: auto;
     }
 
-    /* .hero .flex {
-        height: 60vh;
-        margin-bottom: 30px;
-    } */
+    
 
     .content {
 
@@ -130,6 +127,16 @@
 
     .hero-btn {
         margin-top: 20px;
+    }
+    .content{
+        margin-top: 30px;
+    }
+    .hero-heading{
+        font-size: 40px;
+    }
+    .hero-img::after{
+        width: 200px;
+        height: 200px;
     }
 
 }
