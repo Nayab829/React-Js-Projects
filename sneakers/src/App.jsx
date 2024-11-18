@@ -10,6 +10,7 @@ import Layout from './Layout/Layout'
 import Contact from './pages/Contact'
 import ErrorPage from './components/ErrorPage'
 import Cart from './pages/Cart'
+import Checkout from './pages/Checkout'
 
 
 function App() {
@@ -34,6 +35,10 @@ function App() {
         {
           path: "/cart",
           element: <Cart />
+        },
+        {
+          path: "/checkout",
+          element: <Checkout />
         },
         {
           path: "/contact",
