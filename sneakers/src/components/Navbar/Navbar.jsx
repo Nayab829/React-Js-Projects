@@ -3,7 +3,7 @@ import logo from '../../assets/logo.png'
 
 import { PiShoppingCartLight, PiUserLight } from "react-icons/pi";
 
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa6';
 
 import { FaTimes } from 'react-icons/fa';
@@ -23,10 +23,11 @@ const Navbar = () => {
           <p className=' text-xl md:text-2xl font-bold'>SNEAKERS</p>
         </div>
         {/* //lg */}
-        <ul className={`md:flex gap-10 hidden md:flex-row`}>
+       <div className='flex items-center space-x-6'>
+       <ul className={`md:flex gap-10 hidden md:flex-row`}>
           <NavLink to="/" className={activeClass}><li className={` mx-3`}>Home</li></NavLink>
           <NavLink to="/shop" className={activeClass}><li className='text-lg'>Shop</li></NavLink>
-          <NavLink to="/about" className={activeClass}><li className='text-lg'>About</li></NavLink>
+          {/* <NavLink to="/about" className={activeClass}><li className='text-lg'>About</li></NavLink> */}
           <NavLink to="/contact" className={activeClass}><li className='text-lg'>Contact</li></NavLink>
         </ul>
         <ul className={`flex flex-col gap-5 duration-500 transition-all w-full h-72  -z-10 md:hidden absolute  right-2 bg-white   pt-4 shadow-md rounded p-5 ${showMenu ? "top-24 opacity-100 ":"-top-96 opacity-0 w-0 h-0"}`}>
@@ -38,7 +39,7 @@ const Navbar = () => {
         </ul>
 
         <div className="flex  items-center justify-center  gap-4 md:gap-6 basis-1/4">
-          <PiUserLight className='text-2xl md:text-3xl font-semibold' />
+          <Link to='/login'><PiUserLight className='text-2xl md:text-3xl font-semibold' /> </Link>
           <NavLink to="/cart" > <span className="relative "><PiShoppingCartLight onClick={()=> setShowMenu(false)} className='text-3xl font-semibold' />
             <span className=" flex items-center justify-center absolute  cursor-pointer -top-1 -right-1 bg-red-500 text-white w-4 h-4 rounded-2xl">
               {products.length > 0 ? products.length : 0}
@@ -46,6 +47,7 @@ const Navbar = () => {
           </span></NavLink>
           <FaBars className='md:hidden hover:text-red-500 cursor-pointer' onClick={() => setShowMenu(!showMenu)} />
         </div>
+       </div>
       </div>
     </header>
   )

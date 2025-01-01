@@ -9,7 +9,7 @@ const Checkout = () => {
     const [paymentMethod, setPaymentMethod] = useState("cod")
     const cart = useSelector(state => state.cart)
     return (
-        <div className='max-w-7xl md:mx-auto my-5 flex flex-col p-4 '>
+        <div className='max-w-7xl md:mx-auto my-5 flex flex-col items-start justify-between md:flex-row p-4 '>
             {/* checkout */}
             <div className='md:w-2/3 w-full'>
                 <h3 className="text-2xl font-semibold mb-7 mt-4">CHECKOUT</h3>
@@ -171,7 +171,7 @@ const Checkout = () => {
 
 
             </div>
-            <div className='md:w-1/3 w-full shadow-2xl rounded-lg  mt-14 p-2 md:p-4'>
+            <div className='md:w-[30%] w-full shadow-2xl rounded-lg  mt-14 p-2 md:p-4'>
                 {/* summary */}
                 <h3 className="text-lg font-semibold my-3">Order Summary</h3>
 

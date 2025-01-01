@@ -11,6 +11,8 @@ import Contact from './pages/Contact'
 import ErrorPage from './components/ErrorPage'
 import Cart from './pages/Cart'
 import Checkout from './pages/Checkout'
+import Login from './components/Login'
+import Signup from './components/Signup'
 
 
 function App() {
@@ -39,6 +41,14 @@ function App() {
         {
           path: "/checkout",
           element: <Checkout />
+        },
+        {
+          path: "/login",
+          element: <Login />
+        },
+        {
+          path: "/signup",
+          element: <Signup />
         },
         {
           path: "/contact",
